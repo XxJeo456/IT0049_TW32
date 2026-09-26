@@ -11,7 +11,7 @@
 
 <header class="navbar">
 
-    <div class="logo">Technical Formative Assessment One</div>
+    <div class="logo">Technical Formative Assessment</div>
 
     <ul class="nav-links">
         <li><a href="<?= base_url('/') ?>">Home</a></li>
@@ -46,13 +46,9 @@
                 <?php foreach ($users as $user): ?>
 
                     <tr>
-                        <td><?= esc($user['name']) ?></td>
                         <td><?= esc($user['username']) ?></td>
-                        <td>
-                            <span class="status">
-                                <?= esc($user['role']) ?>
-                            </span>
-                        </td>
+                        <td><?= esc($user['full_name']) ?></td>
+                        <td><?= esc($user['created_at']) ?></td>
                     </tr>
 
                 <?php endforeach; ?>

@@ -11,7 +11,7 @@
 
 <header class="navbar">
 
-    <div class="logo">Technical Formative Assessment One</div>
+    <div class="logo">Technical Formative Assessment</div>
 
     <ul class="nav-links">
         <li><a href="<?= base_url('/') ?>">Home</a></li>
@@ -31,7 +31,7 @@
 
     <div class="about-card">
 
-        <h2>Technical Formative Assessment One</h2>
+        <h2>Technical Formative Assessment</h2>
 
         <p>
             This is a simple web-based account management

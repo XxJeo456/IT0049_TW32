@@ -11,7 +11,7 @@
 
 <header class="navbar">
 
-    <div class="logo">Technical Formative Assessment One</div>
+    <div class="logo">Technical Formative Assessment</div>
 
     <ul class="nav-links">
         <li><a href="<?= base_url('/') ?>">Home</a></li>
@@ -46,7 +46,7 @@
                 <?php foreach ($customers as $customer): ?>
 
                     <tr>
-                        <td><?= esc($customer['name']) ?></td>
+                        <td><?= esc($customer['full_name']) ?></td>
                         <td><?= esc($customer['email']) ?></td>
                         <td><?= esc($customer['phone']) ?></td>
                     </tr>

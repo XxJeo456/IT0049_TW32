@@ -7,6 +7,6 @@ $routes->get('/', 'Pages::landing');
 
 $routes->get('/about', 'Pages::about');
 
-$routes->get('/customers', 'Pages::customers');
+$routes->get('/customers', 'Customer::customers');
 
-$routes->get('/users', 'Pages::users');
+$routes->get('/users', 'User::users');

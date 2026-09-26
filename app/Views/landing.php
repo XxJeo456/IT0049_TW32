@@ -12,7 +12,7 @@
 <body>
 
     <header class="navbar">
-        <div class="logo">Technical Formative Assessment One</div>
+        <div class="logo">Technical Formative Assessment</div>
 
         <ul class="nav-links">
             <li><a href="<?= base_url('/') ?>">Home</a></li>
@@ -25,7 +25,7 @@
     <main class="hero">
         <div class="hero-content">
 
-            <h1>FA1</h1>
+            <h1>WEB</h1>
 
             <p>
                 A simple web-based system for managing
