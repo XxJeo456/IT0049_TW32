@@ -1,6 +1,26 @@
-<?php 
-    require_once(APPPATH . 'Views/inc/header.php');
-?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customers</title>
+    <link rel="stylesheet" href="<?= base_url('style.css') ?>">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">Technical Formative Assessment</div>
+
+    <ul class="nav-links">
+        <li><a href="<?= base_url('/') ?>">Home</a></li>
+        <li><a href="<?= base_url('/about') ?>">About</a></li>
+        <li><a href="<?= base_url('/customers') ?>">Customers</a></li>
+        <li><a href="<?= base_url('/users') ?>">Users</a></li>
+    </ul>
+
+</header>
 
 <main class="container">
 
@@ -41,6 +61,9 @@
 
 </main>
 
-<?php 
-    require_once(APPPATH . 'Views/inc/footer.php');
-?>
+<footer class="footer">
+    <p>&copy; 2026 Plata. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
