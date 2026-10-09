@@ -29,7 +29,7 @@ class Database extends Config
         'hostname'     => 'localhost',
         'username'     => '',
         'password'     => '',
-        'database'     => 'plata-tw32',
+        'database'     => 'ci4-plata',
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',
         'pConnect'     => false,
