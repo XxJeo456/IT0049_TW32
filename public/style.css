@@ -167,6 +167,117 @@ body {
     padding: 25px;
 }
 
+.page-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.form-card {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.login-card {
+    max-width: 420px;
+    margin-top: 100px;
+}
+
+.login-card h1,
+.form-card h1 {
+    margin-bottom: 25px;
+    color: #111827;
+}
+
+.form-card label {
+    display: block;
+    margin: 16px 0 6px;
+    font-weight: bold;
+    color: #374151;
+}
+
+.form-card input[type="text"],
+.form-card input[type="email"],
+.form-card input[type="password"],
+.form-card input[type="file"] {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.form-card input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.form-card small {
+    display: block;
+    margin-top: 6px;
+    color: #6b7280;
+}
+
+.form-card .btn {
+    margin-top: 22px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.btn-small {
+    padding: 8px 12px;
+    font-size: 13px;
+}
+
+.avatar-image {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e5e7eb;
+}
+
+.avatar-preview {
+    width: 120px;
+    height: 120px;
+    display: block;
+    margin: 10px 0;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #2563eb;
+}
+
+.error-box {
+    margin-bottom: 20px;
+    padding: 12px;
+    color: #991b1b;
+    background-color: #fee2e2;
+    border: 1px solid #fecaca;
+    border-radius: 6px;
+}
+
+.error-box p {
+    margin: 3px 0;
+}
+
+@media (max-width: 700px) {
+    .page-header-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form-card {
+        padding: 22px;
+    }
+}
+
 @media (max-width: 700px) {
     .navbar {
         flex-direction: column;

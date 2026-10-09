@@ -11,22 +11,20 @@ $routes->get('/customers', 'Customer::customers');
 
 $routes->get('/users', 'User::users');
 
-$routes->get('customers', 'Customer::customers');
+$routes->get('login', 'Auth::login');
+$routes->post('login', 'Auth::attemptLogin');
+$routes->get('logout', 'Auth::logout');
 
-$routes->get('customers/new', 'Customer::createForm');
+$routes->group('', ['filter' => 'auth'], static function ($routes) {
+    $routes->get('customers', 'Customer::customers');
+    $routes->get('customers/new', 'Customer::createForm');
+    $routes->post('customers/create', 'Customer::create');
+    $routes->get('customers/edit/(:num)', 'Customer::edit/$1');
+    $routes->post('customers/update/(:num)', 'Customer::update/$1');
 
-$routes->post('customers/create', 'Customer::create');
-
-$routes->get('customers/edit/(:num)', 'Customer::edit/$1');
-
-$routes->post('customers/update/(:num)', 'Customer::update/$1');
-
-$routes->get('users', 'User::users');
-
-$routes->get('users/new', 'User::createForm');
-
-$routes->post('users/create', 'User::create');
-
-$routes->get('users/edit/(:num)', 'User::edit/$1');
-
-$routes->post('users/update/(:num)', 'User::update/$1');
+    $routes->get('users', 'User::users');
+    $routes->get('users/new', 'User::createForm');
+    $routes->post('users/create', 'User::create');
+    $routes->get('users/edit/(:num)', 'User::edit/$1');
+    $routes->post('users/update/(:num)', 'User::update/$1');
+});

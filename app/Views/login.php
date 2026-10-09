@@ -3,14 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Account Management System</title>
-
+    <title>Login</title>
     <link rel="stylesheet" href="<?= base_url('style.css') ?>">
 </head>
 
 <body>
-
     <header class="navbar">
         <div class="logo">Technical Formative Assessment</div>
 
@@ -26,28 +23,36 @@
                 <li><a href="<?= base_url('/login') ?>">Login</a></li>
             <?php endif; ?>
         </ul>
-    </header>
+</header>
 
-    <main class="hero">
-        <div class="hero-content">
+<main class="container">
+    <div class="form-card login-card">
+        <h1>Login</h1>
 
-            <h1>WEB</h1>
+        <?php if (session('error')): ?>
+            <div class="error-box">
+                <p><?= esc(session('error')) ?></p>
+            </div>
+        <?php endif; ?>
 
-            <p>
-                A simple web-based system for managing
-                customer and user information.
-            </p>
+        <form method="post" action="<?= base_url('login') ?>">
+            <?= csrf_field() ?>
 
-            <a href="<?= base_url('/customers') ?>" class="btn">
-                View Customers
-            </a>
+            <label for="username">Username</label>
+            <input type="text"
+                   id="username"
+                   name="username"
+                   value="<?= old('username') ?>">
 
-        </div>
-    </main>
+            <label for="password">Password</label>
+            <input type="password"
+                   id="password"
+                   name="password">
 
-    <footer class="footer">
-        <p>&copy; 2026 Plata. All Rights Reserved.</p>
-    </footer>
+            <button type="submit" class="btn">Login</button>
+        </form>
+    </div>
+</main>
 
 </body>
 </html>
